@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Pautog Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <audio id="background-music" src="background-music.mp3" preload="auto" loop></audio>
+    <div class="calculator">
+        <h1 class="title">Mark Pautog Calculator</h1>
+        <div class="display" id="display">0</div>
+        <div class="buttons">
+            <button class="btn" onclick="handleButtonClick('C')">C</button>
+            <button class="btn" onclick="handleButtonClick('/')">/</button>
+            <button class="btn" onclick="handleButtonClick('*')">*</button>
+            <button class="btn" onclick="handleButtonClick('-')">-</button>
+            <button class="btn" onclick="handleButtonClick('7')">7</button>
+            <button class="btn" onclick="handleButtonClick('8')">8</button>
+            <button class="btn" onclick="handleButtonClick('9')">9</button>
+            <button class="btn" onclick="handleButtonClick('+')">+</button>
+            <button class="btn" onclick="handleButtonClick('4')">4</button>
+            <button class="btn" onclick="handleButtonClick('5')">5</button>
+            <button class="btn" onclick="handleButtonClick('6')">6</button>
+            <button class="btn" onclick="calculateResult()">=</button>
+            <button class="btn" onclick="handleButtonClick('1')">1</button>
+            <button class="btn" onclick="handleButtonClick('2')">2</button>
+            <button class="btn" onclick="handleButtonClick('3')">3</button>
+            <button class="btn" onclick="handleButtonClick('0')">0</button>
+        </div>
+    </div>
+    
+    <!-- Button to Play/Pause Music -->
+    <button id="music-toggle" onclick="toggleMusic()">Play Music</button>
+
+    <audio id="click-sound" src="click.wav" preload="auto"></audio>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack elements vertically */
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #0b0c11, #1b1c22); /* Dark gradient background */
+    overflow: hidden; /* Prevents scrollbars */
+}
+
+.futuristic-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 20%, transparent 20%) center/15px 15px;
+    z-index: 0;
+}
+
+.calculator {
+    position: relative; /* Position relative to allow z-index */
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white for a glass effect */
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(74, 144, 226, 0.7); /* Glowing effect */
+    padding: 20px;
+    width: 320px; /* Slightly wider for better button layout */
+    backdrop-filter: blur(10px); /* Blurring effect for glassmorphism */
+    z-index: 1; /* Ensure calculator is above background */
+    transition: box-shadow 0.3s; /* Smooth transition for glow effect */
+}
+
+.calculator:hover {
+    box-shadow: 0 0 40px rgba(74, 144, 226, 1), 0 0 60px rgba(74, 144, 226, 0.5); /* Enhanced glow on hover */
+}
+
+.title {
+    text-align: center;
+    font-size: 26px; /* Slightly larger font for the title */
+    margin-bottom: 20px;
+    color: #ffffff; /* White text for better contrast */
+}
+
+.display {
+    background-color: rgba(34, 34, 34, 0.9); /* Dark semi-transparent background for the display */
+    color: #ffffff; /* White text for contrast */
+    font-size: 40px; /* Larger font size for visibility */
+    text-align: right;
+    padding: 15px; /* Increased padding for better touch targets */
+    border-radius: 5px;
+    margin-bottom: 20px;
+    height: 70px; /* Increased height for better visibility */
+    line-height: 70px; /* Center text vertically */
+    box-shadow: 0 0 10px rgba(74, 144, 226, 0.6); /* Glow effect for display */
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px; /* Consistent gap between buttons */
+}
+
+.btn {
+    background-color: rgba(74, 144, 226, 0.8); /* Soft blue for buttons */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 20px; /* Increased padding for better touch targets */
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s, box-shadow 0.3s; /* Added transform for button press effect */
+    box-shadow: 0 0 10px rgba(74, 144, 226, 0.5); /* Glow effect for buttons */
+}
+
+.btn:hover {
+    background-color: rgba(53, 122, 189, 0.9); /* Darker blue on hover */
+    box-shadow: 0 0 20px rgba(53, 122, 189, 1); /* Enhanced glow on hover */
+}
+
+.btn:active {
+    transform: scale(0.95); /* Slightly shrink button on press */
+}
+
+#music-toggle {
+    background-color: rgba(92, 184, 92, 0.8); /* Green for music button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 20px; /* Consistent padding */
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s, box-shadow 0.3s;
+    box-shadow: 0 0 10px rgba(92, 184, 92, 0.5); /* Glow effect for music toggle */
+}
+
+#music-toggle:hover {
+    background-color: rgba(76, 162, 76, 0.9); /* Darker green on hover */
+    box-shadow: 0 0 20px rgba(76, 162, 76, 1); /* Enhanced glow on hover */
+}
+
+#music-toggle:active {
+    transform: scale(0.95); /* Slightly shrink button on press */
+}
